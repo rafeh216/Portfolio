@@ -5,7 +5,7 @@ import CustomCursor from '@/components/CustomCursor';
 import PageTransition from '@/components/PageTransition';
 
 export const metadata: Metadata = {
-    title: 'Abdul Rafay Abbasi — Full Stack Developer',
+    title: 'Abdul Rafay',
     description: 'Portfolio of Abdul Rafay Abbasi — Premium Creative Agency Aesthetic.',
     icons: {
         icon: '/images/AR logo.jpeg',
