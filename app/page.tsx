@@ -34,7 +34,9 @@ const techStack = {
     'Database': [
         { name: 'MongoDB', icon: '🍃' },
         { name: 'PostgreSQL', icon: '🐘' },
+        { name: 'MySQL', icon: '🐬' },
         { name: 'Mongoose', icon: 'M' },
+        { name: 'Supabase', icon: '⚡' },
     ],
     'Tools & DevOps': [
         { name: 'Git', icon: '⑂' },
@@ -108,21 +110,21 @@ export default function Home() {
 
             {/* ─── HERO ─── */}
             <section className="hero container">
-                <div className="hero-left">
-                    <div className="hero-label mono-label">BASED IN RAWALPINDI</div>
+                <div className="hero-center">
+                    <div className="hero-label mono-label">FULL STACK DEVELOPER — BASED IN RAWALPINDI</div>
                     <div className="hero-title">
                         <TextReveal as="h1" delay={0.4}>ABDUL RAFAY</TextReveal>
                         <TextReveal as="h1" delay={0.6} className="italic">Abbasi</TextReveal>
-                        <TextReveal as="h2" delay={0.8} className="serif-bold">Full Stack Developer</TextReveal>
                     </div>
-                    <ScrollReveal delay={1.2}>
-                        <p className="hero-desc">Building robust, scalable, and premium web applications using modern tech stacks. Focused on clean code and exceptional user experiences.</p>
+                    <ScrollReveal delay={1.0}>
+                        <p className="hero-desc">I design & build end-to-end web applications with modern tech stacks — from pixel-perfect frontends to scalable backend architectures. Focused on clean code, performance, and exceptional user experiences.</p>
                     </ScrollReveal>
-                </div>
-                <div className="hero-right">
-                    <ImageReveal>
-                        <img src="/images/pine_hero_abstract.png" alt="Abstract Hero" />
-                    </ImageReveal>
+                    <ScrollReveal delay={1.2}>
+                        <div className="hero-cta">
+                            <a href="#work" className="btn-pill">View Projects</a>
+                            <a href="#contact" className="link-arrow">Get in Touch →</a>
+                        </div>
+                    </ScrollReveal>
                 </div>
             </section>
 

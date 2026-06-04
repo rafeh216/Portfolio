@@ -30,7 +30,7 @@ export default function TextReveal({ children, as: Tag = 'h2', className = '', d
         
         el.innerHTML = items.map(item => 
             `<span class="text-reveal-word" style="display:inline-block;overflow:hidden;"><span class="text-reveal-inner" style="display:inline-block;transform:translateY(120%);">${item === ' ' ? '&nbsp;' : item}</span></span>`
-        ).join(splitBy === 'chars' ? '' : '<span style="display:inline-block;width:0.3em;"></span>');
+        ).join(splitBy === 'chars' ? '' : '&nbsp;');
 
         const inners = el.querySelectorAll('.text-reveal-inner');
         
