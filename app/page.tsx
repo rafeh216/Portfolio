@@ -111,7 +111,7 @@ export default function Home() {
             {/* ─── HERO ─── */}
             <section className="hero container">
                 <div className="hero-center">
-                    <div className="hero-label mono-label">FULL STACK DEVELOPER — BASED IN RAWALPINDI</div>
+                    <div className="hero-label mono-label">FULL STACK DEVELOPER</div>
                     <div className="hero-title">
                         <TextReveal as="h1" delay={0.4}>ABDUL RAFAY</TextReveal>
                         <TextReveal as="h1" delay={0.6} className="italic">Abbasi</TextReveal>
