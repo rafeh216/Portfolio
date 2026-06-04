@@ -3,6 +3,7 @@ import './globals.css';
 import LenisProvider from '@/components/LenisProvider';
 import CustomCursor from '@/components/CustomCursor';
 import PageTransition from '@/components/PageTransition';
+import GoToTop from '@/components/GoToTop';
 
 export const metadata: Metadata = {
     title: 'Abdul Rafay',
@@ -26,6 +27,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 <LenisProvider>
                     {children}
                 </LenisProvider>
+                <GoToTop />
             </body>
         </html>
     );
