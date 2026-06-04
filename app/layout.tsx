@@ -7,12 +7,16 @@ import PageTransition from '@/components/PageTransition';
 export const metadata: Metadata = {
     title: 'Abdul Rafay Abbasi — Full Stack Developer',
     description: 'Portfolio of Abdul Rafay Abbasi — Premium Creative Agency Aesthetic.',
+    icons: {
+        icon: '/favicon.svg',
+    },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (
         <html lang="en">
             <head>
+                <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
                 <link rel="preconnect" href="https://fonts.googleapis.com" />
                 <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
             </head>
