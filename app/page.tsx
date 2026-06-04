@@ -79,6 +79,7 @@ const projects = [
 const contactLinks = [
     { label: 'Email', value: 'abbasirafay64@gmail.com', href: 'mailto:abbasirafay64@gmail.com', icon: '✉' },
     { label: 'Phone', value: '+92 317 050 0728', href: 'tel:+923170500728', icon: '☎' },
+    { label: 'WhatsApp', value: '+92 317 050 0728', href: 'https://wa.me/923170500728', icon: '💬' },
     { label: 'GitHub', value: 'rafeh216', href: 'https://github.com/rafeh216', icon: '⊙' },
     { label: 'LinkedIn', value: 'Abdul Rafay Abbasi', href: 'https://www.linkedin.com/in/abdul-rafay-abbasi-b257273aa/', icon: 'in' },
 ];
