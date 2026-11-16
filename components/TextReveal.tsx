@@ -1,5 +1,6 @@
 'use client';
-import { useEffect, useRef } from 'react';
+
+import { Fragment, useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -10,49 +11,44 @@ interface TextRevealProps {
     as?: 'h1' | 'h2' | 'h3' | 'p' | 'span';
     className?: string;
     delay?: number;
-    splitBy?: 'words' | 'chars';
 }
 
-export default function TextReveal({ children, as: Tag = 'h2', className = '', delay = 0, splitBy = 'words' }: TextRevealProps) {
-    const ref = useRef<HTMLElement>(null);
+export default function TextReveal({ children, as: Tag = 'h2', className = '', delay = 0 }: TextRevealProps) {
+    const visualRef = useRef<HTMLSpanElement>(null);
+    const words = children.trim().split(/\s+/);
 
     useEffect(() => {
-        if (!ref.current) return;
-        const el = ref.current;
-        const text = el.textContent || '';
-        
-        let items: string[];
-        if (splitBy === 'chars') {
-            items = text.split('');
-        } else {
-            items = text.split(' ');
-        }
-        
-        el.innerHTML = items.map(item => 
-            `<span class="text-reveal-word" style="display:inline-block;overflow:hidden;"><span class="text-reveal-inner" style="display:inline-block;transform:translateY(120%);">${item === ' ' ? '&nbsp;' : item}</span></span>`
-        ).join(splitBy === 'chars' ? '' : '&nbsp;');
+        const visual = visualRef.current;
+        if (!visual || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
-        const inners = el.querySelectorAll('.text-reveal-inner');
-        
-        gsap.to(inners, {
-            y: 0,
-            duration: 1,
-            stagger: 0.04,
-            ease: 'power3.out',
-            delay,
-            scrollTrigger: {
-                trigger: el,
-                start: 'top 85%',
-                toggleActions: 'play none none none',
+        const tween = gsap.fromTo(
+            visual.querySelectorAll('.text-reveal-inner'),
+            { yPercent: 120 },
+            {
+                yPercent: 0,
+                duration: 0.9,
+                stagger: 0.08,
+                delay,
+                ease: 'power3.out',
+                scrollTrigger: { trigger: visual, start: 'top 88%', toggleActions: 'play none none none' },
             },
-        });
-
+        );
         return () => {
-            ScrollTrigger.getAll().forEach(t => {
-                if (t.trigger === el) t.kill();
-            });
+            tween.scrollTrigger?.kill();
+            tween.kill();
         };
-    }, [children, delay, splitBy]);
+    }, [children, delay]);
 
-    return <Tag ref={ref as any} className={className}>{children}</Tag>;
+    return (
+        <Tag className={className} aria-label={children}>
+            <span className="text-reveal-visual" ref={visualRef} aria-hidden="true">
+                {words.map((word, index) => (
+                    <Fragment key={`${word}-${index}`}>
+                        <span className="text-reveal-word"><span className="text-reveal-inner">{word}</span></span>
+                        {index < words.length - 1 ? ' ' : null}
+                    </Fragment>
+                ))}
+            </span>
+        </Tag>
+    );
 }

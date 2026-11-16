@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abdul Rafay Abbasi | Full Stack Developer Resume</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --bg-page: #ffffff;
+            --bg-sidebar: #252a31;
+            --sidebar-text: #d8dce1;
+            --sidebar-heading: #ffffff;
+            --sidebar-accent: #c4c9d0;
+            --sidebar-muted: #a5abb3;
+            --sidebar-divider: rgba(255,255,255,0.12);
+            --accent: #46505b;
+            --accent-light: #f0f2f4;
+            --text-dark: #20242a;
+            --text-body: #41464e;
+            --text-muted: #666d76;
+            --border: #e3e6e9;
+        }
+
+        html { font-size: 13px; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #eef0f2;
+            color: var(--text-body);
+            line-height: 1.45;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* A4 page */
+        .resume-page {
+            width: 210mm;
+            height: 297mm;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 225px 1fr;
+            background: var(--bg-page);
+            overflow: hidden;
+        }
+
+        /* ===== SIDEBAR ===== */
+        .sidebar {
+            background: var(--bg-sidebar);
+            padding: 22px 18px 20px;
+            color: var(--sidebar-text);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            overflow: hidden;
+        }
+
+        /* Profile */
+        .profile { text-align: center; margin-bottom: 16px; }
+        .profile-initials {
+            width: 68px; height: 68px;
+            border-radius: 50%;
+            margin: 0 auto 10px;
+            background: #626a74;
+            display: flex; align-items: center; justify-content: center;
+            font-family: 'Playfair Display', serif;
+            font-size: 26px; font-weight: 700;
+            color: #fff; letter-spacing: 1px;
+            position: relative;
+        }
+        .profile-initials::after {
+            content: '';
+            position: absolute; inset: -4px;
+            border-radius: 50%;
+            border: 2px solid rgba(255,255,255,0.22);
+        }
+        .profile-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 17px; font-weight: 700;
+            color: var(--sidebar-heading);
+            letter-spacing: 0.5px; line-height: 1.25;
+            margin-bottom: 4px;
+        }
+        .profile-title {
+            font-size: 9px; color: var(--sidebar-accent);
+            text-transform: uppercase;
+            letter-spacing: 3px; font-weight: 600;
+        }
+
+        /* Sidebar Sections */
+        .s-section { margin-bottom: 14px; }
+        .s-title {
+            font-size: 9px; font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2.5px;
+            color: var(--sidebar-accent);
+            margin-bottom: 10px;
+            padding-bottom: 6px;
+            border-bottom: 1px solid var(--sidebar-divider);
+            position: relative;
+        }
+        .s-title::after {
+            content: '';
+            position: absolute; bottom: -1px; left: 0;
+            width: 24px; height: 2px;
+            background: var(--sidebar-accent);
+        }
+
+        /* Contact */
+        .contact-item {
+            display: flex; align-items: center;
+            gap: 10px; margin-bottom: 8px;
+            font-size: 10.5px; color: var(--sidebar-text);
+            word-break: break-all;
+        }
+        .contact-item i {
+            color: var(--sidebar-accent); font-size: 10px;
+            width: 14px; text-align: center; flex-shrink: 0;
+        }
+        .contact-item a { color: var(--sidebar-text); text-decoration: none; }
+
+        /* Skills Tags */
+        .skill-category { margin-bottom: 8px; }
+        .skill-category-label {
+            font-size: 8.5px; text-transform: uppercase;
+            letter-spacing: 1.5px; color: var(--sidebar-muted);
+            margin-bottom: 4px; font-weight: 600;
+        }
+        .skill-tags { display: flex; flex-wrap: wrap; gap: 4px; }
+        .skill-tag {
+            background: rgba(255,255,255,0.06);
+            border: 1px solid rgba(255,255,255,0.14);
+            color: #eef0f2;
+            padding: 3px 9px; border-radius: 3px;
+            font-size: 9.5px; font-weight: 500;
+        }
+
+        /* Education */
+        .edu-degree { font-size: 11px; color: var(--sidebar-heading); font-weight: 600; }
+        .edu-school { font-size: 10px; color: var(--sidebar-muted); margin-top: 2px; }
+        .edu-date { font-size: 9px; color: var(--sidebar-accent); font-weight: 600; margin-top: 2px; }
+
+        /* Certifications */
+        .cert-name { font-size: 10.5px; color: var(--sidebar-heading); font-weight: 500; line-height: 1.35; }
+        .cert-level { font-size: 8.5px; color: var(--sidebar-muted); text-transform: uppercase; letter-spacing: 1px; margin-top: 2px; }
+
+        /* Languages */
+        .lang-wrap { display: flex; gap: 16px; }
+        .language-item { display: flex; align-items: center; gap: 6px; font-size: 10.5px; color: var(--sidebar-text); }
+        .language-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--sidebar-accent); }
+
+        /* Sidebar footer */
+        .sidebar-footer {
+            padding-top: 14px;
+            border-top: 1px solid var(--sidebar-divider);
+            text-align: center;
+            font-size: 8px;
+            color: var(--sidebar-muted);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        /* ===== MAIN ===== */
+        .main-content {
+            padding: 22px 28px 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        /* Section Headers */
+        .section { margin-bottom: 14px; }
+        .section-header {
+            display: flex; align-items: center;
+            gap: 8px; margin-bottom: 10px;
+        }
+        .section-icon {
+            width: 26px; height: 26px; border-radius: 5px;
+            background: var(--accent-light);
+            display: flex; align-items: center; justify-content: center;
+            color: var(--accent); font-size: 12px; flex-shrink: 0;
+        }
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 16px; font-weight: 700;
+            color: var(--text-dark); letter-spacing: 0.2px;
+        }
+        .section-title .dot { color: var(--accent); }
+        .section-line {
+            flex: 1; height: 1px;
+            background: linear-gradient(90deg, var(--border), transparent);
+        }
+
+        /* Summary */
+        .summary-text {
+            font-size: 11px; color: var(--text-body);
+            line-height: 1.65; padding: 10px 14px;
+            background: #f8fafc; border-radius: 6px;
+            border-left: 3px solid var(--accent);
+        }
+
+        /* Timeline */
+        .timeline { position: relative; padding-left: 22px; }
+        .timeline::before {
+            content: '';
+            position: absolute; left: 5px; top: 6px; bottom: 6px;
+            width: 2px;
+            background: linear-gradient(180deg, var(--accent), var(--border));
+            border-radius: 1px;
+        }
+        .timeline-item { position: relative; margin-bottom: 12px; }
+        .timeline-item:last-child { margin-bottom: 0; }
+        .timeline-item::before {
+            content: '';
+            position: absolute; left: -19px; top: 6px;
+            width: 10px; height: 10px; border-radius: 50%;
+            background: var(--accent);
+            border: 2px solid #fff;
+            box-shadow: 0 0 0 1.5px var(--accent);
+            z-index: 1;
+        }
+        .timeline-header {
+            display: flex; align-items: baseline;
+            justify-content: space-between; gap: 8px;
+            margin-bottom: 2px;
+        }
+        .timeline-role {
+            font-size: 12px; font-weight: 700;
+            color: var(--text-dark);
+        }
+        .timeline-date {
+            font-size: 8.5px; color: var(--accent);
+            text-transform: uppercase; letter-spacing: 1.5px; font-weight: 700;
+            background: var(--accent-light); padding: 2px 10px;
+            border-radius: 3px; white-space: nowrap;
+        }
+        .timeline-company {
+            font-size: 10.5px; color: var(--text-muted);
+            margin-bottom: 4px;
+        }
+        .timeline-desc { font-size: 10px; color: var(--text-body); line-height: 1.5; }
+        .timeline-desc ul { list-style: none; }
+        .timeline-desc ul li { position: relative; padding-left: 14px; margin-bottom: 4px; }
+        .timeline-desc ul li::before {
+            content: '›'; position: absolute; left: 0;
+            color: var(--accent); font-size: 14px; font-weight: 700;
+            line-height: 1.1;
+        }
+
+        /* Projects */
+        .projects-grid { display: flex; flex-direction: column; gap: 6px; }
+        .project-card {
+            background: #f8fafc; border-radius: 6px;
+            padding: 8px 12px; border: 1px solid var(--border);
+            position: relative; overflow: hidden;
+        }
+        .project-card::before {
+            content: '';
+            position: absolute; top: 0; left: 0;
+            width: 100%; height: 2px;
+            background: linear-gradient(90deg, var(--accent), transparent);
+        }
+        .project-name {
+            font-size: 11.5px; font-weight: 700;
+            color: var(--text-dark);
+        }
+        .project-sep {
+            font-size: 11px; color: var(--text-muted);
+            margin: 0 3px;
+        }
+        .project-desc {
+            font-size: 10.5px; color: var(--text-body);
+            display: inline;
+        }
+        .project-links { display: flex; gap: 12px; margin-top: 5px; }
+        .project-links a { color: var(--text-dark); font-size: 9px; font-weight: 600; text-decoration: underline; text-underline-offset: 2px; }
+        .project-tech { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 6px; }
+        .tech-badge {
+            font-size: 8px; padding: 2px 8px; border-radius: 3px;
+            background: var(--accent-light);
+            color: var(--accent); text-transform: uppercase;
+            letter-spacing: 0.8px; font-weight: 700;
+            border: 1px solid rgba(70,80,91,0.12);
+        }
+
+        /* Skills (Main) */
+        .skills-grouped { display: flex; flex-direction: column; gap: 12px; }
+        .main-skill-category-label {
+            font-size: 10px; font-weight: 700; color: var(--text-dark);
+            text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px;
+        }
+        .main-skill-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+
+        /* Print */
+        @media print {
+            body { background: #fff; -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; color-adjust: exact !important; }
+            .resume-page { width: 100%; height: 100vh; box-shadow: none; }
+            @page { size: A4; margin: 0; }
+            .print-btn { display: none !important; }
+        }
+        @media screen {
+            body { padding: 24px 0; }
+            .resume-page {
+                box-shadow: 0 4px 40px rgba(0,0,0,0.12), 0 1px 6px rgba(0,0,0,0.08);
+                border-radius: 3px;
+            }
+        }
+        .print-btn {
+            position: fixed; bottom: 24px; right: 24px;
+            padding: 12px 24px;
+            background: var(--accent);
+            color: white; border: none; border-radius: 50px;
+            font-family: 'Inter', sans-serif;
+            font-size: 13px; font-weight: 600; letter-spacing: 0.5px;
+            cursor: pointer;
+            box-shadow: 0 4px 16px rgba(32,36,42,0.2);
+            transition: all 0.3s; z-index: 1000;
+            display: flex; align-items: center; gap: 8px;
+        }
+        .print-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 24px rgba(32,36,42,0.28); }
+    </style>
+</head>
+<body>
+
+<div class="resume-page">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <div>
+            <div class="profile">
+                <div class="profile-initials">AR</div>
+                <h1 class="profile-name">Abdul Rafay<br>Abbasi</h1>
+                <p class="profile-title">Full Stack Developer</p>
+            </div>
+
+            <div class="s-section">
+                <h2 class="s-title">Contact</h2>
+                <div class="contact-item"><i class="fas fa-envelope"></i><a href="mailto:abbasirafay64@gmail.com">abbasirafay64@gmail.com</a></div>
+                <div class="contact-item"><i class="fas fa-phone"></i><span>+92 317 0500728</span></div>
+                <div class="contact-item"><i class="fab fa-github"></i><a href="https://github.com/rafeh216">github.com/rafeh216</a></div>
+            </div>
+
+            <div class="s-section">
+                <h2 class="s-title">Tech Stack</h2>
+                <div class="skill-category">
+                    <div class="skill-category-label">Frontend</div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">React</span><span class="skill-tag">Next.js</span><span class="skill-tag">Tailwind CSS</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-category-label">Backend</div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Node.js</span><span class="skill-tag">Express</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-category-label">Databases</div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">PostgreSQL</span><span class="skill-tag">MySQL</span><span class="skill-tag">MongoDB</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-category-label">Low-Code / Deploy</div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Mendix</span><span class="skill-tag">Vercel</span><span class="skill-tag">Render</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="s-section">
+                <h2 class="s-title">Education</h2>
+                <div class="edu-degree">Bachelor in Software Engineering</div>
+                <div class="edu-school">Bahria University, Islamabad</div>
+                <div class="edu-date">Expected: June 2027</div>
+            </div>
+
+            <div class="s-section">
+                <h2 class="s-title">Certifications</h2>
+                <div class="cert-name">Mendix Certified Rapid Developer</div>
+                <div class="cert-level">Basic Level</div>
+            </div>
+
+            <div class="s-section" style="margin-bottom:0;">
+                <h2 class="s-title">Languages</h2>
+                <div class="lang-wrap">
+                    <span class="language-item"><span class="language-dot"></span><span>English</span></span>
+                    <span class="language-item"><span class="language-dot"></span><span>Urdu</span></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="sidebar-footer">MERN Stack · Next.js · Mendix</div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+        <div>
+            <!-- Summary -->
+            <section class="section">
+                <div class="section-header">
+                    <div class="section-icon"><i class="fas fa-user"></i></div>
+                    <h2 class="section-title">Professional Summary<span class="dot">.</span></h2>
+                    <span class="section-line"></span>
+                </div>
+                <div class="summary-text">
+                    Full Stack Developer with hands-on experience in the MERN stack, Next.js, and Mendix low-code platforms. Delivered 12+ full-stack web applications for independent clients and built enterprise business logic at NESL IT and Softoo — from data modeling through UI deployment. Mendix Certified Rapid Developer.
+                </div>
+            </section>
+
+            <!-- Experience -->
+            <section class="section">
+                <div class="section-header">
+                    <div class="section-icon"><i class="fas fa-briefcase"></i></div>
+                    <h2 class="section-title">Experience<span class="dot">.</span></h2>
+                    <span class="section-line"></span>
+                </div>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-header">
+                            <span class="timeline-role">Junior Mendix Developer</span>
+                            <span class="timeline-date">Nov 2025 – Jul 2026</span>
+                        </div>
+                        <div class="timeline-company">NESL IT, I-10/3, Islamabad</div>
+                        <div class="timeline-desc"><ul>
+                            <li>Architected and maintained Mendix domain models and microflows powering core enterprise business logic.</li>
+                            <li>Translated stakeholder requirements directly into working low-code modules, from data model through UI.</li>
+                            <li>Partnered with cross-functional teams on UI/UX to replace manual, spreadsheet-driven processes with automated workflows.</li>
+                            <li>Wrote and maintained test cases using YAML-based configuration files and tracked QA work through Jira.</li>
+                        </ul></div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-header">
+                            <span class="timeline-role">Mendix Developer Intern</span>
+                            <span class="timeline-date">Jul 2025 – Sep 2025</span>
+                        </div>
+                        <div class="timeline-company">Softoo, I-10, Islamabad</div>
+                        <div class="timeline-desc"><ul>
+                            <li>Built domain models and microflows for enterprise applications handling complex, multi-entity data relationships.</li>
+                            <li>Designed UI flows for internal business tools under senior developer guidance.</li>
+                        </ul></div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-header">
+                            <span class="timeline-role">Freelance Web Developer</span>
+                            <span class="timeline-date">May 2024 – Present</span>
+                        </div>
+                        <div class="timeline-company">Self-Employed</div>
+                        <div class="timeline-desc"><ul>
+                            <li>Delivered 12+ full-stack web applications and landing pages for independent clients, end-to-end from architecture through deployment.</li>
+                            <li>Managed client requirements, timelines, and deployment independently as sole developer on each engagement.</li>
+                        </ul></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Key Projects -->
+            <section class="section">
+                <div class="section-header">
+                    <div class="section-icon"><i class="fas fa-code"></i></div>
+                    <h2 class="section-title">Key Projects<span class="dot">.</span></h2>
+                    <span class="section-line"></span>
+                </div>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <span class="project-name">FYP Management System</span>
+                        <span class="project-sep">—</span>
+                        <span class="project-desc">Role-based project coordination portal for students, supervisors, and coordinators, with group management and progress tracking.</span>
+                        <div class="project-links">
+                            <a href="https://fyp-management-system-jet.vercel.app/login" target="_blank" rel="noopener noreferrer">Live Demo</a>
+                            <a href="https://github.com/rafeh216/FYP-MANAGEMENT-SYSTEM" target="_blank" rel="noopener noreferrer">GitHub</a>
+                        </div>
+                        <div class="project-tech">
+                            <span class="tech-badge">React</span><span class="tech-badge">Node.js</span><span class="tech-badge">MongoDB</span><span class="tech-badge">JWT</span>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <span class="project-name">Cravin' Buns</span>
+                        <span class="project-sep">—</span>
+                        <span class="project-desc">Digital food-ordering and restaurant management workflow designed to replace manual order-taking.</span>
+                        <div class="project-links">
+                            <a href="https://cravinbuns.vercel.app/" target="_blank" rel="noopener noreferrer">Live Demo</a>
+                            <a href="https://github.com/rafeh216/cravin-buns" target="_blank" rel="noopener noreferrer">GitHub</a>
+                        </div>
+                        <div class="project-tech">
+                            <span class="tech-badge">MongoDB</span><span class="tech-badge">Express</span><span class="tech-badge">React</span><span class="tech-badge">Node.js</span>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <span class="project-name">EduQuiz</span>
+                        <span class="project-sep">—</span>
+                        <span class="project-desc">Full-stack quiz platform with Google sign-in and real-time scoring, tested with 50 users.</span>
+                        <div class="project-links">
+                            <a href="https://eduquiz-ar.vercel.app/" target="_blank" rel="noopener noreferrer">Live Demo</a>
+                            <a href="https://github.com/awais2228/EduQuiz" target="_blank" rel="noopener noreferrer">GitHub</a>
+                        </div>
+                        <div class="project-tech">
+                            <span class="tech-badge">React</span><span class="tech-badge">Node.js</span><span class="tech-badge">Express</span><span class="tech-badge">Vercel</span><span class="tech-badge">Render</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Skills pinned to bottom -->
+        <section class="section" style="margin-bottom:0;">
+            <div class="section-header">
+                <div class="section-icon"><i class="fas fa-chart-bar"></i></div>
+                <h2 class="section-title">Skills<span class="dot">.</span></h2>
+                <span class="section-line"></span>
+            </div>
+            <div class="skills-grouped">
+                <div>
+                    <div class="main-skill-category-label">Frontend</div>
+                    <div class="main-skill-tags">
+                        <span class="tech-badge">React</span>
+                        <span class="tech-badge">Next.js</span>
+                        <span class="tech-badge">Tailwind CSS</span>
+                        <span class="tech-badge">HTML/CSS</span>
+                    </div>
+                </div>
+                <div>
+                    <div class="main-skill-category-label">Backend & Databases</div>
+                    <div class="main-skill-tags">
+                        <span class="tech-badge">Node.js</span>
+                        <span class="tech-badge">Express</span>
+                        <span class="tech-badge">MongoDB</span>
+                        <span class="tech-badge">PostgreSQL</span>
+                        <span class="tech-badge">MySQL</span>
+                    </div>
+                </div>
+                <div>
+                    <div class="main-skill-category-label">Low-Code & Deploy</div>
+                    <div class="main-skill-tags">
+                        <span class="tech-badge">Mendix</span>
+                        <span class="tech-badge">Vercel</span>
+                        <span class="tech-badge">Render</span>
+                    </div>
+                </div>
+                <div>
+                    <div class="main-skill-category-label">Testing & Tools</div>
+                    <div class="main-skill-tags">
+                        <span class="tech-badge">Jira</span>
+                        <span class="tech-badge">YAML-based test configuration</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+</div>
+
+<button class="print-btn" onclick="window.print()">
+    <i class="fas fa-file-pdf"></i> Save as PDF
+</button>
+
+</body>
+</html>

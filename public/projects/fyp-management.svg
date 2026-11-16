@@ -1,0 +1,170 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900" fill="none">
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1440" y2="900" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#111827"/>
+      <stop offset="1" stop-color="#090D15"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#8AA8FF"/>
+      <stop offset="1" stop-color="#5B7BE7"/>
+    </linearGradient>
+    <linearGradient id="chartFill" x1="800" y1="390" x2="800" y2="620" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#7393F4" stop-opacity=".2"/>
+      <stop offset="1" stop-color="#7393F4" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1440" height="900" fill="#080B12"/>
+  <rect x="22" y="22" width="1396" height="856" rx="24" fill="url(#background)" stroke="#273244" stroke-width="2"/>
+  <path d="M258 23V877" stroke="#273244" stroke-width="2"/>
+
+  <rect x="48" y="52" width="42" height="42" rx="13" fill="url(#accent)"/>
+  <path d="M60 66h18v15H60zM64 61h10v5H64z" stroke="#F8FAFC" stroke-width="2" stroke-linejoin="round"/>
+  <text x="102" y="70" fill="#F8FAFC" font-family="Inter, Segoe UI, sans-serif" font-size="17" font-weight="700">FYP</text>
+  <text x="102" y="89" fill="#94A3B8" font-family="Inter, Segoe UI, sans-serif" font-size="10" font-weight="600" letter-spacing="2">MANAGEMENT</text>
+
+  <text x="52" y="143" fill="#64748B" font-family="Inter, Segoe UI, sans-serif" font-size="10" font-weight="700" letter-spacing="1.8">WORKSPACE</text>
+  <rect x="40" y="164" width="194" height="46" rx="12" fill="#1D2B47"/>
+  <rect x="40" y="164" width="3" height="46" rx="1.5" fill="#86A3FF"/>
+  <rect x="58" y="179" width="14" height="14" rx="3" stroke="#AFC2FF" stroke-width="1.6"/>
+  <path d="M61 186h8M65 182v8" stroke="#AFC2FF" stroke-width="1.4" stroke-linecap="round"/>
+  <text x="84" y="192" fill="#E8EEFF" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="600">Dashboard</text>
+
+  <g fill="#8895A9" font-family="Inter, Segoe UI, sans-serif" font-size="13">
+    <rect x="59" y="235" width="14" height="13" rx="2" stroke="#718096" stroke-width="1.5"/>
+    <path d="M62 239h8M62 243h6" stroke="#718096" stroke-width="1.4" stroke-linecap="round"/>
+    <text x="84" y="247">Projects</text>
+    <circle cx="66" cy="286" r="7" stroke="#718096" stroke-width="1.5"/>
+    <path d="M54 301c1-6 5-9 12-9s11 3 12 9" stroke="#718096" stroke-width="1.5" stroke-linecap="round"/>
+    <text x="84" y="291">Students</text>
+    <circle cx="62" cy="337" r="5" stroke="#718096" stroke-width="1.5"/>
+    <circle cx="72" cy="337" r="5" stroke="#718096" stroke-width="1.5"/>
+    <path d="M53 350c1-4 4-6 9-6M72 344c5 0 8 2 9 6" stroke="#718096" stroke-width="1.5" stroke-linecap="round"/>
+    <text x="94" y="342">Supervisors</text>
+    <rect x="59" y="378" width="14" height="17" rx="2" stroke="#718096" stroke-width="1.5"/>
+    <path d="M62 383h8M62 387h8M62 391h5" stroke="#718096" stroke-width="1.3" stroke-linecap="round"/>
+    <text x="84" y="391">Reviews</text>
+    <circle cx="66" cy="438" r="7" stroke="#718096" stroke-width="1.5"/>
+    <path d="M66 434v5l3 2" stroke="#718096" stroke-width="1.4" stroke-linecap="round"/>
+    <text x="84" y="443">Milestones</text>
+  </g>
+
+  <path d="M42 786H238" stroke="#273244"/>
+  <circle cx="66" cy="824" r="17" fill="#27344A"/>
+  <text x="66" y="828" text-anchor="middle" fill="#D9E2F1" font-family="Inter, Segoe UI, sans-serif" font-size="10" font-weight="700">FA</text>
+  <text x="94" y="821" fill="#E2E8F0" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="600">Faculty Admin</text>
+  <text x="94" y="839" fill="#718096" font-family="Inter, Segoe UI, sans-serif" font-size="10">Workspace owner</text>
+
+  <text x="292" y="81" fill="#F1F5F9" font-family="Inter, Segoe UI, sans-serif" font-size="25" font-weight="700">Project dashboard</text>
+  <text x="292" y="108" fill="#8290A5" font-family="Inter, Segoe UI, sans-serif" font-size="13">Keep student projects, reviews, and milestones moving.</text>
+  <rect x="1172" y="56" width="138" height="31" rx="15.5" fill="#17243A" stroke="#2B3C5A"/>
+  <circle cx="1190" cy="71.5" r="4" fill="#8AA8FF"/>
+  <text x="1201" y="75" fill="#B7C7E9" font-family="Inter, Segoe UI, sans-serif" font-size="10" font-weight="700" letter-spacing=".8">SAMPLE PREVIEW</text>
+  <circle cx="1350" cy="72" r="21" fill="#1D2A3D" stroke="#334155"/>
+  <text x="1350" y="76" text-anchor="middle" fill="#DCE5F2" font-family="Inter, Segoe UI, sans-serif" font-size="11" font-weight="600">FA</text>
+
+  <g>
+    <rect x="292" y="137" width="347" height="125" rx="16" fill="#141D2B" stroke="#293548"/>
+    <text x="316" y="169" fill="#8D9AAF" font-family="Inter, Segoe UI, sans-serif" font-size="11" font-weight="600" letter-spacing=".7">ACTIVE PROJECTS</text>
+    <text x="316" y="211" fill="#F1F5F9" font-family="Inter, Segoe UI, sans-serif" font-size="31" font-weight="700">24</text>
+    <rect x="570" y="155" width="43" height="43" rx="13" fill="#202E49"/>
+    <path d="M583 169h17v15h-17zM587 165h9v4h-9z" stroke="#9BB2F8" stroke-width="1.6" stroke-linejoin="round"/>
+    <text x="316" y="238" fill="#76849A" font-family="Inter, Segoe UI, sans-serif" font-size="11">Across current academic year</text>
+
+    <rect x="656" y="137" width="347" height="125" rx="16" fill="#141D2B" stroke="#293548"/>
+    <text x="680" y="169" fill="#8D9AAF" font-family="Inter, Segoe UI, sans-serif" font-size="11" font-weight="600" letter-spacing=".7">STUDENTS IN GROUPS</text>
+    <text x="680" y="211" fill="#F1F5F9" font-family="Inter, Segoe UI, sans-serif" font-size="31" font-weight="700">86</text>
+    <rect x="934" y="155" width="43" height="43" rx="13" fill="#202E49"/>
+    <circle cx="949" cy="171" r="5" stroke="#9BB2F8" stroke-width="1.6"/>
+    <circle cx="962" cy="171" r="5" stroke="#9BB2F8" stroke-width="1.6"/>
+    <path d="M941 185c1-5 4-7 8-7s7 2 8 7M955 185c1-5 4-7 8-7s7 2 8 7" stroke="#9BB2F8" stroke-width="1.5" stroke-linecap="round"/>
+    <text x="680" y="238" fill="#76849A" font-family="Inter, Segoe UI, sans-serif" font-size="11">Assigned to project teams</text>
+
+    <rect x="1020" y="137" width="354" height="125" rx="16" fill="#141D2B" stroke="#293548"/>
+    <text x="1044" y="169" fill="#8D9AAF" font-family="Inter, Segoe UI, sans-serif" font-size="11" font-weight="600" letter-spacing=".7">REVIEWS TO SCHEDULE</text>
+    <text x="1044" y="211" fill="#F1F5F9" font-family="Inter, Segoe UI, sans-serif" font-size="31" font-weight="700">08</text>
+    <rect x="1305" y="155" width="43" height="43" rx="13" fill="#202E49"/>
+    <rect x="1318" y="166" width="17" height="17" rx="3" stroke="#9BB2F8" stroke-width="1.6"/>
+    <path d="M1318 171h17M1323 163v6M1330 163v6" stroke="#9BB2F8" stroke-width="1.5" stroke-linecap="round"/>
+    <text x="1044" y="238" fill="#76849A" font-family="Inter, Segoe UI, sans-serif" font-size="11">Upcoming supervisor checkpoints</text>
+  </g>
+
+  <rect x="292" y="282" width="704" height="354" rx="17" fill="#121A27" stroke="#293548"/>
+  <text x="318" y="316" fill="#E6EDF7" font-family="Inter, Segoe UI, sans-serif" font-size="15" font-weight="600">Project progress</text>
+  <text x="318" y="338" fill="#79879B" font-family="Inter, Segoe UI, sans-serif" font-size="11">Milestones completed across active projects</text>
+  <rect x="855" y="299" width="113" height="29" rx="8" fill="#182235" stroke="#2A394E"/>
+  <text x="875" y="318" fill="#AEBBD0" font-family="Inter, Segoe UI, sans-serif" font-size="10">This semester</text>
+  <path d="M337 390H955M337 444H955M337 498H955M337 552H955" stroke="#263244" stroke-dasharray="4 7"/>
+  <g fill="#718096" font-family="Inter, Segoe UI, sans-serif" font-size="10">
+    <text x="314" y="393">100%</text>
+    <text x="321" y="447">75%</text>
+    <text x="321" y="501">50%</text>
+    <text x="321" y="555">25%</text>
+    <text x="347" y="589">Week 1</text>
+    <text x="475" y="589">Week 3</text>
+    <text x="604" y="589">Week 5</text>
+    <text x="733" y="589">Week 7</text>
+    <text x="863" y="589">Week 9</text>
+  </g>
+  <path d="M358 522C403 515 429 495 469 503C509 511 536 462 579 470C620 478 645 440 687 448C729 456 756 411 800 425C842 438 874 402 916 407L916 562H358V522Z" fill="url(#chartFill)"/>
+  <path d="M358 522C403 515 429 495 469 503C509 511 536 462 579 470C620 478 645 440 687 448C729 456 756 411 800 425C842 438 874 402 916 407" stroke="#8AA8FF" stroke-width="3" stroke-linecap="round"/>
+  <g fill="#121A27" stroke="#AFC2FF" stroke-width="2">
+    <circle cx="469" cy="503" r="5"/><circle cx="579" cy="470" r="5"/><circle cx="687" cy="448" r="5"/><circle cx="800" cy="425" r="5"/><circle cx="916" cy="407" r="5"/>
+  </g>
+
+  <rect x="1016" y="282" width="358" height="354" rx="17" fill="#121A27" stroke="#293548"/>
+  <text x="1040" y="316" fill="#E6EDF7" font-family="Inter, Segoe UI, sans-serif" font-size="15" font-weight="600">Upcoming reviews</text>
+  <text x="1040" y="338" fill="#79879B" font-family="Inter, Segoe UI, sans-serif" font-size="11">Scheduled project checkpoints</text>
+  <g font-family="Inter, Segoe UI, sans-serif">
+    <circle cx="1055" cy="385" r="15" fill="#202E49"/>
+    <path d="M1050 385h10M1055 380v10" stroke="#9BB2F8" stroke-width="1.5" stroke-linecap="round"/>
+    <text x="1080" y="381" fill="#DCE4F0" font-size="12" font-weight="600">Design review</text>
+    <text x="1080" y="399" fill="#79879B" font-size="10">Project group A · Today</text>
+    <rect x="1299" y="373" width="51" height="22" rx="11" fill="#1B2A43"/>
+    <text x="1311" y="388" fill="#9EB5F6" font-size="9" font-weight="600">PENDING</text>
+    <path d="M1040 422H1350" stroke="#263244"/>
+
+    <circle cx="1055" cy="457" r="15" fill="#202E49"/>
+    <path d="M1050 457h10M1055 452v10" stroke="#9BB2F8" stroke-width="1.5" stroke-linecap="round"/>
+    <text x="1080" y="453" fill="#DCE4F0" font-size="12" font-weight="600">Progress checkpoint</text>
+    <text x="1080" y="471" fill="#79879B" font-size="10">Project group B · Tomorrow</text>
+    <rect x="1299" y="445" width="51" height="22" rx="11" fill="#1B2A43"/>
+    <text x="1311" y="460" fill="#9EB5F6" font-size="9" font-weight="600">PENDING</text>
+    <path d="M1040 494H1350" stroke="#263244"/>
+
+    <circle cx="1055" cy="529" r="15" fill="#202E49"/>
+    <path d="M1050 529h10M1055 524v10" stroke="#9BB2F8" stroke-width="1.5" stroke-linecap="round"/>
+    <text x="1080" y="525" fill="#DCE4F0" font-size="12" font-weight="600">Final presentation</text>
+    <text x="1080" y="543" fill="#79879B" font-size="10">Project group C · Friday</text>
+    <rect x="1299" y="517" width="51" height="22" rx="11" fill="#1B2A43"/>
+    <text x="1311" y="532" fill="#9EB5F6" font-size="9" font-weight="600">PENDING</text>
+  </g>
+  <text x="1040" y="601" fill="#9FB4F2" font-family="Inter, Segoe UI, sans-serif" font-size="11" font-weight="600">View review calendar</text>
+  <path d="M1159 598h18M1173 593l5 5-5 5" stroke="#9FB4F2" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <rect x="292" y="656" width="1082" height="194" rx="17" fill="#121A27" stroke="#293548"/>
+  <text x="318" y="690" fill="#E6EDF7" font-family="Inter, Segoe UI, sans-serif" font-size="15" font-weight="600">Recent projects</text>
+  <text x="318" y="712" fill="#79879B" font-family="Inter, Segoe UI, sans-serif" font-size="11">A sample view of project groups and review status</text>
+  <text x="318" y="747" fill="#718096" font-family="Inter, Segoe UI, sans-serif" font-size="9" font-weight="700" letter-spacing=".8">PROJECT</text>
+  <text x="690" y="747" fill="#718096" font-family="Inter, Segoe UI, sans-serif" font-size="9" font-weight="700" letter-spacing=".8">SUPERVISOR</text>
+  <text x="900" y="747" fill="#718096" font-family="Inter, Segoe UI, sans-serif" font-size="9" font-weight="700" letter-spacing=".8">PROGRESS</text>
+  <text x="1192" y="747" fill="#718096" font-family="Inter, Segoe UI, sans-serif" font-size="9" font-weight="700" letter-spacing=".8">STATUS</text>
+  <path d="M318 760H1348M318 802H1348" stroke="#263244"/>
+  <g font-family="Inter, Segoe UI, sans-serif" font-size="11">
+    <text x="318" y="786" fill="#DCE4F0" font-weight="600">Campus Connect</text>
+    <text x="690" y="786" fill="#A2AEC0">Dr. A. Finch</text>
+    <rect x="900" y="777" width="190" height="6" rx="3" fill="#293548"/>
+    <rect x="900" y="777" width="133" height="6" rx="3" fill="url(#accent)"/>
+    <text x="1101" y="786" fill="#A2AEC0">70%</text>
+    <rect x="1192" y="770" width="92" height="22" rx="11" fill="#1B2A43"/>
+    <text x="1207" y="785" fill="#9EB5F6" font-size="9" font-weight="600">IN REVIEW</text>
+
+    <text x="318" y="828" fill="#DCE4F0" font-weight="600">Research Archive</text>
+    <text x="690" y="828" fill="#A2AEC0">Prof. S. Khan</text>
+    <rect x="900" y="819" width="190" height="6" rx="3" fill="#293548"/>
+    <rect x="900" y="819" width="95" height="6" rx="3" fill="url(#accent)"/>
+    <text x="1101" y="828" fill="#A2AEC0">50%</text>
+    <rect x="1192" y="812" width="92" height="22" rx="11" fill="#1B2A43"/>
+    <text x="1207" y="827" fill="#9EB5F6" font-size="9" font-weight="600">IN PROGRESS</text>
+  </g>
+</svg>

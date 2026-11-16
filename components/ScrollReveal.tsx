@@ -28,6 +28,11 @@ export default function ScrollReveal({
         if (!ref.current) return;
         const el = ref.current;
 
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+            el.classList.add('is-visible');
+            return;
+        }
+
         const directionMap = {
             up: { y: 60, x: 0 },
             down: { y: -60, x: 0 },
@@ -46,6 +51,7 @@ export default function ScrollReveal({
                 duration,
                 delay,
                 ease: 'power3.out',
+                onComplete: () => el.classList.add('is-visible'),
                 scrollTrigger: {
                     trigger: el,
                     start: 'top 85%',
@@ -55,9 +61,7 @@ export default function ScrollReveal({
         );
 
         return () => {
-            ScrollTrigger.getAll().forEach(t => {
-                if (t.trigger === el) t.kill();
-            });
+            ScrollTrigger.getAll().filter(t => t.trigger === el).forEach(t => t.kill());
         };
     }, [direction, delay, duration]);
 
